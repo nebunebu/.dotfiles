@@ -1,0 +1,7 @@
+[user]
+	email = nebu.nebuchadnezzar@gmail.com
+	name = nebu
+[init]
+	defaultBranch = main
+[credential]
+	helper = cache --timeout=86400

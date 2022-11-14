@@ -1,0 +1,5 @@
+# choose which files or directories to ignore by specifying file or directory name or using a regular expression
+#
+
+inactive/*
+README.md

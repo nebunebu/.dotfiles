@@ -1,0 +1,102 @@
+*faceName: FiraCode.ttf:pixelsize=12
+Xterm.vt100.loginshell: true
+
+XTerm.VT100.translations: #override \
+  Ctrl Shift <Key>K: scroll-back(1) \n\
+  Ctrl Shift <Key>J: scroll-forw(1)
+
+XTerm.vt100.foreground: #a0b3c5
+XTerm.vt100.background: #1d252c
+! Black + DarkGrey
+*color0:  #1d252c
+*color8:  #566c7d
+! DarkRed + Red
+*color1:  #db334c
+*color9:  #d95468
+! DarkGreen + Green
+*color2:  #42cc62
+*color10: #8bd49c
+! DarkYellow + Yellow
+*color3:  #e8a74c
+*color11: #ebbf83
+! DarkBlue + Blue
+*color4:  #178cd4
+*color12: #5ec4ff
+! DarkMagenta + Magenta
+*color5:  #931ba6
+*color13: #c06ece
+!DarkCyan + Cyan (both not tango)
+*color6:  #008b94
+*color14: #70e1e8
+! LightGrey + White
+*color7:  #a0b3c5
+*color15: #e2e9f0
+
+! The basic colors
+! *foreground:                #a0b3c5
+! *background:                #1d252c
+! *selection_foreground:      #1d252c
+! *selection_background:      #a0b3c5
+
+! Cursor colors
+! cursor                    #a0b3c5
+! cursor_text_color         #1d252c
+
+! URL
+! url_color                 #5ec4ff
+
+! kitty window border colors
+! active_border_color       #a0b3c5
+! inactive_border_color     #62686e
+
+! OS Window titlebar colors
+! wayland_titlebar_color    #1d252c
+! macos_titlebar_color      #1d252c
+
+! Tab bar colors
+! active_tab_foreground     #1d252c
+! active_tab_background     #a0b3c5
+! inactive_tab_foreground   #a0b3c5
+! inactive_tab_background   #1d252c
+
+! Colors for marks (marked text in the terminal)
+
+! mark1_foreground          #1d252c
+! mark1_background          #8bd49c
+! mark2_foreground          #1d252c
+! mark2_background          #ebbf83
+! mark3_foreground          #1d252c
+! mark3_background          #d95468
+
+! The basic 16 colors
+! black
+! color0                    #1d252c
+! color8                    #566c7d
+
+! red
+! color1                    #d95468
+! color9                    #d95468
+
+! green
+! color2                    #8bd49c
+! color10                   #8bd49c
+
+! yellow
+! color3                    #ebbf83
+! color11                   #ebbf83
+
+! blue
+! color4                    #5ec4ff
+! color12                   #5ec4ff
+
+! magenta
+! color5                    #c06ece
+! color13                   #c06ece
+
+! cyan
+! color6                    #008b94
+! color14                   #70e1e8
+
+! white
+! color7                    #a0b3c5
+! color15                   #a0b3c5
