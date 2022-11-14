@@ -20,4 +20,10 @@ stow -R .     # delete and recreate symbolic links
 sudo loadkeys ~/.keystrings
 ```
 
+## .inputrc
+- terminal cursor is fat in normal mode and skinny in insert mode
 
+## TODO
+- [ ] add xournal
+- [ ] add picom
+- [ ] add paru
