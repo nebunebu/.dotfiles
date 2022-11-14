@@ -19,3 +19,5 @@ stow -R .     # delete and recreate symbolic links
 ```sh
 sudo loadkeys ~/.keystrings
 ```
+
+
