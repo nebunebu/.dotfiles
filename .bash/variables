@@ -1,0 +1,5 @@
+# variables
+aw="$HOME/.config/awesome/"
+nv="$HOME/.config/nvim/lua/user/"
+pj="$HOME/Projects"
+ss="$HOME/Pictures/Screenshots"

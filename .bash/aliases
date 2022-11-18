@@ -1,0 +1,10 @@
+# ░█▀█░█░░░▀█▀░█▀█░█▀▀░█▀▀░█▀▀
+# ░█▀█░█░░░░█░░█▀█░▀▀█░█▀▀░▀▀█
+# ░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀
+
+alias lynx='lynx -cfg=~/.lynx.cfg'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias v='devour vlc'
+alias z='devour zathura'
+alias n='nvim'

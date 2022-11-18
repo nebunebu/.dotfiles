@@ -9,95 +9,19 @@
 #  ▀▀ ▀▀▀     ▀▀▀▀ ▀▀   ▀▀▀▀▀▀   ▀▀    ▀▀   ▀▀         ▀▀▀▀▀  #
 ###############################################################
 
+# custom aliases
+. .bash/aliases
+# custom functions
+. .bash/functions
+# custom variables
+. .bash/variables
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 complete -cf doas
+
 shopt -s checkwinsize >/dev/null
-
-# ░█▀▀░█░█░█▀█░█▀▀░▀█▀░▀█▀░█▀█░█▀█░█▀▀
-# ░█▀▀░█░█░█░█░█░░░░█░░░█░░█░█░█░█░▀▀█
-# ░▀░░░▀▀▀░▀░▀░▀▀▀░░▀░░▀▀▀░▀▀▀░▀░▀░▀▀▀
-
-# Open new terminal in last working directory
-# And list directory when changing directories
-# aliased to cd
-# if [[ -f ~/.bash_lastdir ]]; then
-#   source ~/.bash_lastdir
-#   cd $LAST_DIR
-# fi
-
-cc() {
-	if [ $# -eq 0 ]; then
-		cd ~
-		# ls --color=auto -A $PWD
-		echo "LAST_DIR=$PWD" >~/.bash_lastdir
-	else
-		cd "$PWD/$1"
-		# ls --color=auto -A $PWD
-		echo "LAST_DIR=$PWD" >~/.bash_lastdir
-	fi
-}
-
-# show-color() {
-#     perl -e 'foreach $a(@ARGV){print "\e[48:2::".join(":",unpack("C*",pack("H*",$a)))."m \e[49m "};print "\n"' "$@"
-# }
-#
-# term-colors () {
-#   for x in {0..8}; do
-#       for i in {30..37}; do
-#           for a in {40..47}; do
-#               echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "
-#           done
-#           echo
-#       done
-#   done
-#   echo ""
-# }
-
-mcd() {
-	mkdir -p "$1"
-	cd "$1"
-}
-
-ll() {
-	ls --color=auto -lhAs
-}
-
-# clean () {
-#   perl-rename 's/\d+/sprintf("%02d", $&)/e' *
-#   perl-rename 's/\s+//g' *
-#   rm *.srt
-# }
-
-# ░█▀█░█░░░▀█▀░█▀█░█▀▀░█▀▀░█▀▀
-# ░█▀█░█░░░░█░░█▀█░▀▀█░█▀▀░▀▀█
-# ░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░▀▀▀
-# alias cd='cc'
-
-# toilet font sample
-# not working when aliased
-#alias tfs='var=$(ls /usr/share/figlet/ | sed '/-/d' | sed 's/\..*$//g') && for i in ${var[@]}; do echo -e "\n\n$i"; toilet -f $i SAMPLE; done'
-
-alias lynx='lynx -cfg=~/.lynx.cfg'
-alias Screenshots='cd ~/Pictures/Screenshots'
-alias Courses='cd ~/Downloads/Courses'
-alias Books='cd ~/Downloads/Books'
-
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias aao='cd ~/Documents/AAO/FS/01SoftwareEngineeringFoundations'
-
-alias v='devour vlc'
-alias z='devour zathura'
-alias n='nvim'
-
-# variables
-aw="$HOME/.config/awesome/"
-nv="$HOME/.config/nvim/lua/user/"
-pj="$HOME/Projects"
-#alias zeropad="perl-rename 's/\d+/sprintf("%02d",$&)/e' *"
-
 PS1="\[\033[38;5;6m\][\[$(tput sgr0)\]\[$(tput bold)\]\W\[$(tput sgr0)\]\[\033[38;5;6m\]]\[$(tput sgr0)\]\[\033[38;5;3m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\[$(tput sgr0)\]\[\033[38;5;6m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
 
 HISTSIZE=-1
@@ -116,6 +40,7 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 setxkbmap -option caps:swapescape
 
 export EDITOR=/home/nebu/.local/bin/nvim
+
 export PATH=$PATH:"$HOME/Scripts:$HOME/.local/:$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.cargo/bin:"
 export LIBVIRT_DEFAULT_URI='qemu:///system'
 

@@ -1,0 +1,46 @@
+# ░█▀▀░█░█░█▀█░█▀▀░▀█▀░▀█▀░█▀█░█▀█░█▀▀
+# ░█▀▀░█░█░█░█░█░░░░█░░░█░░█░█░█░█░▀▀█
+# ░▀░░░▀▀▀░▀░▀░▀▀▀░░▀░░▀▀▀░▀▀▀░▀░▀░▀▀▀
+
+# Open new terminal in last working directory
+# And list directory when changing directories
+# aliased to cd
+# if [[ -f ~/.bash_lastdir ]]; then
+#   source ~/.bash_lastdir
+#   cd $LAST_DIR
+# fi
+
+cc() {
+	if [ $# -eq 0 ]; then
+		cd ~
+		# ls --color=auto -A $PWD
+		echo "LAST_DIR=$PWD" >~/.bash_lastdir
+	else
+		cd "$PWD/$1"
+		# ls --color=auto -A $PWD
+		echo "LAST_DIR=$PWD" >~/.bash_lastdir
+	fi
+}
+
+# term-colors () {
+#   for x in {0..8}; do
+#       for i in {30..37}; do
+#           for a in {40..47}; do
+#               echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "
+#           done
+#           echo
+#       done
+#   done
+#   echo ""
+# }
+
+mcd() {
+	mkdir -p "$1"
+	cd "$1"
+}
+
+# clean () {
+#   perl-rename 's/\d+/sprintf("%02d", $&)/e' *
+#   perl-rename 's/\s+//g' *
+#   rm *.srt
+# }
