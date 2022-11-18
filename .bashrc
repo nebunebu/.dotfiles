@@ -15,6 +15,8 @@
 . .bash/functions
 # custom variables
 . .bash/variables
+# bashmarks
+. .bash/bashmarks
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -41,7 +43,7 @@ setxkbmap -option caps:swapescape
 
 export EDITOR=/home/nebu/.local/bin/nvim
 
-export PATH=$PATH:"$HOME/Scripts:$HOME/.local/:$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.cargo/bin:"
+export PATH=$PATH:"$HOME/.scripts:$HOME/.local/:$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$HOME/.cargo/bin:"
 export LIBVIRT_DEFAULT_URI='qemu:///system'
 
 eval "$(rbenv init - bash)"
